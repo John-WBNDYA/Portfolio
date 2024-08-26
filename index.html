@@ -1,275 +1,267 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+         rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <title>My Portfolio</title>
 
-<head>
-    <!-- Bootstrap CSS and Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <style>
+            
+            #nav {
+              border: 3px solid #ff0909;
+              border-radius: 200px;
+              padding: 10px;
+              box-shadow: 0 0 15px #ff0909;
+              background-color: #ff6207;
+              color: white;
+              transition: transform 1s ease;
+            }
 
-    <title>My Portfolio</title>
+            #nav:hover {
+              transform: scale(1.2);
+            }
 
-    <!-- Custom Styles -->
-    <style>
-        /* Navigation Icon Styles */
-        #nav {
-            border: 3px solid #ff0909;
-            border-radius: 200px;
-            padding: 10px;
-            box-shadow: 0 0 15px #ff0909;
-            background-color: #ff6207;
-            color: white;
-            transition: transform 1s ease;
-        }
+            .nav-link{
+              color: white;
+              font-weight: bold;
+            }
+            
+            .nav-link:hover{
+              color: #ff6207;
+              transition: 0.4s;
+            }
 
-        /* Navigation Icon Hover Effect */
-        #nav:hover {
-            transform: scale(1.2);
-        }
 
-        /* Navigation Link Styles */
-        .nav-link {
-            color: white;
-            font-weight: bold;
-        }
+            #me {
+              box-shadow: #ff0909;
+            }
 
-        /* Navigation Link Hover Effect */
-        .nav-link:hover {
-            color: #ff6207;
-            transition: 0.4s;
-        }
-        
-        /* Skill Card Container */
-        .skill-card {
-            width: 150px;
-            height: 150px;
-            perspective: 1000px;
-            margin: 20px;
-            float: left;
-        }
+            .skill-card {
+              width: 150px;
+              height: 150px;
+              perspective: 1000px;
+              margin: 20px;
+              float: left;
+            }
 
-        /* Section Title Color */
-        h1 {
-            color: #ff6207;
-        }
+            h1 {
+              color: #ff6207;
+            }
 
-        /* Heading Styles */
-        #heading {
-            color: #ff6207;
-        }
+            #heading {
+              color: #ff6207;
+            }
 
-        /* Subheading Styles */
-        #subheading {
-            color: #ff0909;
-        }
+            #heading {
+              color: #ff6207;
+            }
 
-        /* Skill Card Front and Back */
-        .card-front,
-        .card-back {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            transition: transform 0.6s;
-        }
+            .card-front, .card-back {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              backface-visibility: hidden;
+              border-radius: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              transition: transform 0.6s;
+            }
 
-        /* Skill Card Front */
-        .card-front {
-            background-color: #ff0909;
-            color: white;
-        }
+            .card-front {
+              background-color: #ff0909;
+              color: white;
+            }
 
-        /* Skill Card Back */
-        .card-back {
-            background-color: #ff6207;
-            transform: rotateY(180deg);
-            color: white;
-        }
+            .card-back {
+              background-color: #ff6207;
+              transform: rotateY(180deg);
+              color: white;
+            }
 
-        /* Skill Card Flip Effect */
-        .skill-card:hover .card-front {
-            transform: rotateY(180deg);
-        }
+            .skill-card:hover .card-front {
+              transform: rotateY(180deg);
+            }
 
-        .skill-card:hover .card-back {
-            transform: rotateY(360deg);
-        }
+            .skill-card:hover .card-back {
+              transform: rotateY(360deg);
+            }
 
-        /* Vertical Line Style */
-        .vertical-line {
-            border-left: 2px solid white;
-            height: 150px;
-            margin-left: 20px;
-        }
-    </style>
-</head>
+            .vertical-line {
+              border-left: 2px solid white;
+              height: 150px; /* Adjust height as needed */
+              margin-left: 20px;
+            }
 
-<body style="background-color: black;">
+        </style>
 
-    <!-- Portfolio Title -->
-    <div class="container-fluid">
+    </head>
+
+    <body style="background-color: black;">
+      <br>
+      <div class="container-fluid">
         <b><h2 class="text-center" style="color: orangered;">My Portfolio</h2></b>
-    </div>
-
-    <br><br><br>
-
-    <!-- Navigation Section -->
-    <div class="container">
+      </div>
+         <!-- Navigation section -->           
+        <br><br><br>
+      <div class="container">
         <div class="row">
-            <!-- Skills -->
-            <div class="col-md-3 text-center">
-                <img src="logo-white.png" width="200" height="200" id="nav" alt="Skills">
-                <h5 class="text-center mt-3 text-white">
-                    <a class="nav-link" href="#skill">Skills</a>
-                </h5>
-            </div>
-            <!-- Education -->
-            <div class="col-md-3 text-center">
-                <img src="logo-white.png" width="200" height="200" id="nav" alt="Education">
-                <h5 class="text-center mt-3 text-white">
-                    <a class="nav-link" href="#education">Education</a>
-                </h5>
-            </div>
-            <!-- Work Experience -->
-            <div class="col-md-3 text-center">
-                <img src="logo-white.png" width="200" height="200" id="nav" alt="Work Experience">
-                <h5 class="text-center mt-3 text-white">
-                    <a class="nav-link" href="#work">Work Experience</a>
-                </h5>
-            </div>
-            <!-- Contact Details -->
-            <div class="col-md-3 text-center">
-                <img src="logo-white.png" width="200" height="200" id="nav" alt="Contact Details">
-                <h5 class="text-center mt-3 text-white">
-                    <a class="nav-link" href="#contacts">Contact Details</a>
-                </h5>
-            </div>
+          <div class="col-md-3 text-center">
+            <img src="logo-white.png" width="200" height="200" id="nav">
+            <h5 class="text-center mt-3 text-white">
+              <a class="nav-link" href="#skill">Skills</a>
+            </h5>
+          </div>
+          <div class="col-md-3 text-center">
+            <img src="logo-white.png" width="200" height="200" id="nav">
+            <h5 class="text-center mt-3 text-white">
+              <a class="nav-link" href="#education">Education</a>
+            </h5>
+          </div>
+          <div class="col-md-3 text-center">
+            <img src="logo-white.png" width="200" height="200" id="nav">
+            <h5 class="text-center mt-3 text-white" >
+              <a class="nav-link" href="#work">Work Experience</a>
+            </h5>
+          </div>
+          <div class="col-md-3 text-center">
+            <img src="logo-white.png" width="200" height="200" id="nav">
+            <h5 class="text-center mt-3 text-white">
+              <a class="nav-link" href="#contacts">Contact Details</a>
+            </h5>
+          </div>
         </div>
-    </div>
+      </div><br><br><br><br><br><br><br>
 
-    <br><br><br><br><br><br><br>
-
-    <!-- About Me Section -->
-    <div class="container">
+      <!-- Some information about me -->
+      <div class="container">
         <h1 class="text-center">ABOUT ME</h1><br>
-        <div class="row">
-            <!-- Image -->
-            <div class="col-md-2">
-                <img src="me.jpg" class="rounded" alt="Me" width="100%" height="200" id="me">
-            </div>
-            <div class="col-md-1"></div>
-            <!-- Bio -->
-            <div class="col-md-9 text-center">
-                <h3>
-                    "Hi, I'm Jean-Venant Kapia Tshimombo from the Democratic Republic of the Congo. 
-                    As an aspiring Software Engineer, I'm passionate about learning and solving problems. 
-                    My goal is to open a coding school in my country, empowering young people to rebuild and shape a brighter future."
-                </h3>
-            </div>
+        <div class="row"> 
+          <div class="col-md-2">
+            <img src="me.jpg" class="rounded" alt="Me" width="100%" height="200" id="me">
+          </div>
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-9 text-center text-white">
+            <h3>" Hi, I'm Jean-Venant Kapia Tshimombo from the Democratic Republic of the Congo.
+              As an aspiring Software Engineer, I'm passionate about learning and solving problems. 
+              My goal is to open a coding school in my country, empowering young people to rebuild and shape a brighter future."  
+            </h3>
+          </div>
         </div>
-    </div>
+      </div><br><br><br><br><br><br><br><br>
 
-    <br><br><br><br><br><br><br><br>
-
-    <!-- Skills Section -->
-    <div class="container">
+    <!-- Skills section -->
+      <div class="container">
         <h1 id="skill">SKILLS</h1><br>
+
+        <!-- Skill cards for my technical skills -->
         <div class="row">
-            <h3 id="heading">Technical Skills</h3>
-            <!-- Python Skill Card -->
-            <div class="col-md-3 skill-card">
-                <div class="card-front">
-                    <h3>Python</h3>
-                </div>
-                <div class="card-back">
-                    <p>Experience: 1 year</p>
-                    <p>Projects: 2+</p>
-                </div>
+          <h3 id="heading">Technical Skills</h3>
+            <div class=" col-md-3  skill-card">
+              <div class="card-front">
+                <h3>Python</h3>
+              </div>
+              <div class="card-back">
+                <p>Experience: 1 year</p>
+                <p>Projects: 2+</p>
+              </div>
             </div>
-            <!-- HTML Skill Card -->
-            <div class="col-md-3 skill-card">
-                <div class="card-front">
-                    <h3>HTML</h3>
-                </div>
-                <div class="card-back">
-                    <p>Experience: 1 year</p>
-                    <p>Projects: 5+</p>
-                </div>
+            <div class=" col-md-3  skill-card">
+              <div class="card-front">
+                <h3>HTML</h3>
+              </div>
+              <div class="card-back">
+                <p>Experience: 1 year</p>
+                <p>Projects: 5+</p>
+              </div>
             </div>
-            <!-- CSS Skill Card -->
-            <div class="col-md-3 skill-card">
-                <div class="card-front">
-                    <h3>CSS</h3>
-                </div>
-                <div class="card-back">
-                    <p>Experience: 1 year</p>
-                    <p>Projects: 5+</p>
-                </div>
+            <div class=" col-md-3  skill-card">
+              <div class="card-front">
+                <h3>CSS</h3>
+              </div>
+              <div class="card-back">
+                <p>Experience: 1 year</p>
+                <p>Projects: 5+</p>
+              </div>
             </div>
-            <!-- Bootstrap Skill Card -->
-            <div class="col-md-3 skill-card">
-                <div class="card-front">
-                    <h3>BOOTSTRAP</h3>
-                </div>
-                <div class="card-back">
-                    <p>Experience: 3 months</p>
-                    <p>Projects: 4+</p>
-                </div>
+            <div class=" col-md-3  skill-card">
+              <div class="card-front">
+                <h3>BOOTSTRAP</h3>
+              </div>
+              <div class="card-back">
+                <p>Experience: 3 months</p>
+                <p>Projects: 4+</p>
+              </div>
             </div>
-        </div>
-
-        <br><br>
-
+        </div><br><br>
         <div class="row">
-            <h3 id="heading">Creative Skills</h3>
-            <!-- Creative Skills List -->
-            <div class="col-md-3">
-                <ul>
-                    <li>Drawing</li>
-                    <li>Painting</li>
-                    <li>Football</li>
-                </ul>
-            </div>
+        <h3 id="heading">Creative Skills</h3>
+        <div class="col-md-3">
+          <ul>
+            <li class="text-white">Drawing</li>
+            <li class="text-white">Painting</li>
+            <li class="text-white">Football</li>
+          </ul>
         </div>
-
         <br><br><br><br><br>
-
         <div class="row">
-            <h3 id="heading">Soft Skills</h3>
-            <!-- Soft Skills List -->
-            <div class="col-md-3">
-                <ul>
-                    <li>Teamwork</li>
-                    <li>Communication</li>
-                    <li>Problem-Solving</li>
-                </ul>
-            </div>
+          <h3 id="heading">Soft Skills</h3>
+          <div class="col-md-3">
+            <ul>
+              <li class="text-white">Drawing</li>
+              <li class="text-white">Painting</li>
+              <li class="text-white">Football</li>
+            </ul>
+          </div>      
         </div>
-    </div>
 
-    <br><br><br><br><br>
-
-    <!-- Education Section -->
-    <div class="container">
+        <!-- Education section -->
+      <div class="container"><br><br><br><br><br>
         <h1 id="education">EDUCATION</h1><br>
         <div class="row">
-            <h3 id="subheading">High School</h3>
-            <!-- Education Details -->
-            <div class="col-md-6">
-                <ul>
-                    <li>School: The Cape Academy of Maths, Science and Technology</li>
-                    <li>Subjects: Mathematics, Physics, Accounting, Information Technology</li>
-                    <li>Highest grade passed: Grade 12, Bachelors pass</li>
-                </ul>
-            </div>
+          <h3 class="text-white" id="subheading">High School</h3>
+          <div class="col-md-6">
+            <ul>
+              <li class="text-white">School: The Cape Academy of Maths, Science and Technology</li>
+              <li class="text-white">Subjects: Mathematics, Physics, Accounting, Information Technology</li>
+              <li class="text-white">Highest grade passed: Grade12, Bachelors pass</li>
+            </ul>
+          </div>
         </div>
-    </div>
 
-    <br><br><br><br><br>
+        <!-- Work Experience section -->
+        <div class="container"><br><br><br><br><br>
+          <h1 id="work">WORK EXPERIENCE</h1><br>
+          <div class="row">
+            <h6 class="text-white">
+              I'm excited to bring my fresh perspective and passion for software engineering to new challenges. 
+              While I haven't had the opportunity to gain formal work experience just yet, I've been actively 
+              honing my skills through personal projects, learning, and problem-solving. I'm eager to apply my 
+              knowledge and enthusiasm to make a meaningful impact in the industry.
+            </h6>
+      <br><br><br><br><br><br>
+      <hr>    
 
-   
+      <!-- Contact Details section -->
+      <h1 class="text-center" id="contacts">CONTACT ME</h1><br><br><br><br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center"> 
+            <img src="logo-no-background.png" alt="My Logo" width="200" height="150"> 
+          </div>
+
+          <!-- Links to different accounts -->
+          <div class="col-md-8 text-left"> 
+            <h4><b><i class="bi bi-envelope"></i></b</h4>: <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHxGsSgKzmcqwHmCpdlZtmQBgjJDBGRDwBbVPMQlkzxBZTRsjPZlxbqtQtVKMbzsRJMwbrP" target="_blank">johnkapia2023@gmail.com</a>
+            <h4><b><i class="bi bi-phone"></i></b</h4>: <a href="#" target="_blank">+27732641048</a>  
+            <h4><b><i class="bi bi-linkedin"></i></b</h4>: <a href="https://www.linkedin.com/company/login" target="_blank">LinkedIn</a>
+            <h4><b><i class="bi bi-instagram"></i></b</h4>: <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank">Instagram</a>
+
+          </div>        
+        </div>
+      </div>
+    </body>
+</html>
